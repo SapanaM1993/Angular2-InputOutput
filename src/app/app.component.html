@@ -1,0 +1,16 @@
+<div>
+  <h1>Input Demo</h1>
+  <h2>Parent</h2>
+<p>Enter string</p>
+<input type="text" #parentTxt (keyup)="0"> 
+<app-child [parentData]="parentTxt.value"></app-child>
+</div>
+
+<hr>
+
+<div>
+    <h1>Output Demo</h1>
+  <h2>Parent </h2>
+  <p> Displaying data written into child input text is: {{ childData }} </p>
+  <app-child2 (childEvent)="childData=$event"></app-child2>
+</div>
